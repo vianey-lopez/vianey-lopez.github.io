@@ -1,0 +1,322 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #1c2c2e; /* Azul/teal oscuro para texto */
+}
+
+/* Navegación */
+header {
+  background: #1c2c2e; /* Azul/teal oscuro */
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f4e3c1; /* Beige claro */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #f4e3c1; /* Beige claro */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d4a017; /* Mostaza dorado */
+}
+
+
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #7fc8c5, #1c2c2e); /* Verde menta → azul oscuro */
+  color: #fff;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #f4e3c1; /* Beige */
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d4a017; /* Mostaza */
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: background 0.3s;
+}
+
+
+.btn-primary {
+  background: #d4a017; /* Mostaza */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1c2c2e;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #f4e3c1;
+  color: #f4e3c1;
+}
+
+.btn-secondary:hover {
+  background: #f4e3c1;
+  color: #1c2c2e;
+}
+
+.hero-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  
+}
+.hero-image img {
+  width: 250px;
+  height: 270px;
+  border-radius: 20%;      /* hace el marco circular */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
+  object-fit: cover;       /* mantiene proporciones */
+}
+
+/* Animación de giro */
+.card {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+  margin: auto;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Estilo para el reverso de la tarjeta */
+.card-back {
+  background: #1c2c2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+/* responsivo para la tarjeta */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;   /* ocupa casi todo el ancho en móvil */
+    height: auto;
+  }
+  .card-front img {
+    height: auto;
+  }
+}
+.imagen-movimiento {
+  transition: transform 0.5s ease;
+}
+
+.imagen-movimiento:hover {
+  transform: scale(1.1); /* agranda la imagen */
+}
+.card {
+  width: 300px;
+  overflow: hidden; /* evita que la imagen se salga del contenedor */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-img {
+  width: 100%;
+  transition: transform 0.4s ease; /* suaviza el efecto */
+}
+
+.card-img:hover {
+  transform: scale(1.5); /* zoom al pasar el cursor */
+}
+
+
+
+/* Proyectos */
+.projects {
+  padding: 3rem 2rem;
+  background: #f4e3c1; /* Beige claro */
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1c2c2e;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #7fc8c5; /* Verde menta */
+}
+
+.project-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.btn-card {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #1c2c2e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-card:hover {
+  background: #d4a017;
+}
+
+/* Sobre mí */
+.about {
+  padding: 3rem 2rem;
+  background: #7fc8c5; /* Verde menta */
+  text-align: center;
+  color: #1c2c2e;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skill-item {
+  background: #d4a017; /* Mostaza */
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+}
+
+/* Contacto */
+.contact {
+  padding: 3rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #1c2c2e;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-item {
+  font-size: 1.1rem;
+  color: #1c2c2e;
+}
+
+/* Footer */
+footer {
+  background: #1c2c2e;
+  color: #f4e3c1;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
