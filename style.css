@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #d4a017; /* Mostaza dorado */
+  color: #661b50; /* Mostaza dorado */
 }
 
 
@@ -75,7 +75,7 @@ nav ul li a:hover {
 .hero-text h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #d4a017; /* Mostaza */
+  color: #661b50; /* Mostaza */
 }
 
 .btn {
@@ -88,7 +88,7 @@ nav ul li a:hover {
 
 
 .btn-primary {
-  background: #d4a017; /* Mostaza */
+  background: #b968a1; /* rosa */
   color: #fff;
 }
 
@@ -246,7 +246,7 @@ nav ul li a:hover {
 }
 
 .btn-card:hover {
-  background: #d4a017;
+  background: #b968a1;
 }
 
 /* Sobre mí */
@@ -266,7 +266,7 @@ nav ul li a:hover {
 }
 
 .skill-item {
-  background: #d4a017; /* Mostaza */
+  background: #b968a1; /* rosa */
   color: #fff;
   padding: 0.7rem 1rem;
   border-radius: 5px;
@@ -321,6 +321,9 @@ footer {
   }
 }
 
+
+
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -372,4 +375,16 @@ footer {
 
 .dot.active {
   background: #f4e3c1;
+}
+
+.carousel {
+  transition: height 0.5s ease;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }

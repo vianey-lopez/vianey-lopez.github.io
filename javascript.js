@@ -46,3 +46,19 @@ track.addEventListener('mouseleave', startAutoPlay);
 
 startAutoPlay();
 
+function updateSlide() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+
+  // Ajustar altura al slide actual
+  const currentSlide = slides[index];
+  const newHeight = currentSlide.offsetHeight;
+  track.parentElement.style.height = `${newHeight}px`;
+}
+
+// Ajustar altura inicial
+window.addEventListener('load', () => {
+  const initialHeight = slides[0].offsetHeight;
+  track.parentElement.style.height = `${initialHeight}px`;
+});
